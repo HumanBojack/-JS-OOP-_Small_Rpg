@@ -17,4 +17,19 @@ export default class Game {
 		}
 		return this;
 	}
+
+	static watchStats() {
+		let players = Character.all.filter(character => character.status == "playing");
+
+		let hps = players.map(player => player.hp);
+		let maxHp = players.find(player => player.hp == Math.max(...hps));
+		let lowestHp = players.find(player => player.hp == Math.min(...hps))
+		let dmg = players.map(player => player.dmg);
+		let highDmg = players.find(player => player.dmg == Math.max(...dmg));
+		console.log(`The player with: 
+		-the highest health points is ${maxHp.name}(${maxHp.hp}hp),
+		-the lowest health points is ${lowestHp.name}(${lowestHp.hp}hp), 
+		-the highest damage is ${highDmg.name}(${highDmg.dmg}dmg)`);
+		console.log(players);
+	}
 }

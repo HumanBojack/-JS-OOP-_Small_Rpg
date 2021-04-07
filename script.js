@@ -9,6 +9,7 @@ import Assassin from './assassin.js';
 
 window.Game = Game;
 window.Turn = Turn;
+window.Character = Character;
 
 const Grace = new Fighter("Grace");
 window.Grace = Grace;
