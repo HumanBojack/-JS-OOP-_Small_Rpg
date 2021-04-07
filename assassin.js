@@ -9,6 +9,7 @@ export default class Assassin extends Character {
 		if (this.mana >= 20) {
 			this.mana -= 20;
 			victim.takeDamage(7);
+			this.turn.endPlayerTurn(this);
 		} else {
 			console.log("You don't have enough mana to do that.");
 		}

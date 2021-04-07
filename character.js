@@ -5,6 +5,8 @@ export default class Character {
 		this.hp = hp;
 		this.dmg = dmg;
 		this.mana = mana;
+		this.timeoutId = 0;
+		this.hasPlayed = false;
 		Character.all.push(this);
 	}
 
@@ -24,10 +26,15 @@ export default class Character {
 			if (victim.status == "loser") {
 				this.mana += 20;
 			}
+			this.turn.endPlayerTurn(this);
 		} else {
 			console.log("You can't attack this player");
 		}
-		return this;
+		return this
+	}
+
+	static randomPlayer(players){
+		return players[Math.floor(Math.random() * players.length)];
 	}
 }
 Character.all = [];

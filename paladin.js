@@ -18,6 +18,7 @@ export default class Paladin extends Character {
 			if (victim.status == "loser") {
 				this.mana += 20;
 			}
+			this.turn.endPlayerTurn(this);
 		} else {
 			console.log("You can't do that");
 		}

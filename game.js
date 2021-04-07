@@ -9,9 +9,9 @@ export default class Game {
 	newTurn(){
 		if (this.turnLeft >= 1){
 			this.turnLeft -= 1;
-			this.turn = new Turn(10 - this.turnLeft);
+			this.turn = new Turn(10 - this.turnLeft, this);
 			this.turn.startTurn();
-			this.turn.order(Character.all.filter(character => character.status == "playing"));
+			this.turn.order(Character.all);
 		} else {
 			console.log("Game has ended")
 		}

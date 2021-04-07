@@ -8,22 +8,17 @@ import Berzerker from './berzerker.js';
 import Assassin from './assassin.js';
 
 window.Game = Game;
-
+window.Turn = Turn;
 
 const Grace = new Fighter("Grace");
 window.Grace = Grace;
 const Ulder = new Paladin("Ulder");
 window.Ulder = Ulder;
 const Moana = new Monk("Moana");
+window.Moana = Moana;
 const Draven = new Berzerker("Draven");
+window.Draven = Draven;
 const Carl = new Assassin("Carl");
-console.log("*")
-console.log(Grace);
-console.log(Ulder);
-console.log(Moana);
-console.log(Draven);
-console.log(Carl);
-
-console.log(Character.all);
+window.Carl = Carl;
 
 

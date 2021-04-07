@@ -8,6 +8,7 @@ export default class Berzerker extends Character {
 		if (this.hp >= 2) {
 			this.dmg += 1;
 			this.hp -= 1;
+			this.turn.endPlayerTurn(this);
 		} else {
 			console.log("Your life is too low for that");
 		}
