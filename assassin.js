@@ -11,7 +11,7 @@ export default class Assassin extends Character {
 			victim.takeDamage(7);
 			this.turn.endPlayerTurn(this);
 		} else {
-			console.log("You don't have enough mana to do that.");
+			alertHTML.textContent = `You probably don't have enought mana (${this.mana})`;
 		}
 		return this;
 	}
@@ -26,5 +26,9 @@ export default class Assassin extends Character {
 			console.log("Ennemy down");
 		}
 		return this;
+	}
+
+	special(victim){
+		this.shadowHit(victim);
 	}
 }

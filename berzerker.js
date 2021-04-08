@@ -10,8 +10,12 @@ export default class Berzerker extends Character {
 			this.hp -= 1;
 			this.turn.endPlayerTurn(this);
 		} else {
-			console.log("Your life is too low for that");
+			alertHTML.textContent = `Your life is too low (${this.hp})`;
 		}
 		return this;
+	}
+
+	special(victim){
+		this.rage();
 	}
 }

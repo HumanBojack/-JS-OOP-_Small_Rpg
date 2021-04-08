@@ -30,6 +30,7 @@ export default class Turn {
 	endPlayerTurn = (player) => {
 		player.hasPlayed = true;
 		clearTimeout(player.timeoutId);
+		alertHTML.textContent = "";
 		this.order(Character.all);
 	}
 }

@@ -20,8 +20,12 @@ export default class Paladin extends Character {
 			}
 			this.turn.endPlayerTurn(this);
 		} else {
-			console.log("You can't do that");
+			alertHTML.textContent = `You probably don't have enought mana (${this.mana})`;
 		}
 		return this;
+	}
+
+	special(victim){
+		this.healingLighting(victim);
 	}
 }

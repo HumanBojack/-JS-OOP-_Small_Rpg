@@ -24,13 +24,12 @@ export default class Character {
 	dealDamage(victim) {
 		if (victim.status == "playing") {
 			victim.takeDamage(this.dmg);
-			console.log(this.dmg);
 			if (victim.status == "loser") {
 				this.mana += 20;
 			}
 			this.turn.endPlayerTurn(this);
 		} else {
-			console.log("You can't attack this player");
+			alertHTML.textContent = "You can't attack this player";
 		}
 		return this
 	}

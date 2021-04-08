@@ -1,31 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-	<link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-	<div id="game">
-		<p id="playing">None</p>
-		<p id="alive">None</p>
-		<select id="victim" name="victim">
-		</select>
-		<a href="#" class="btn btn-dark" id="attack">Attack</a>
-		<a href="#" class="btn btn-dark" id="special">Special attack</a>
-		<p id="turn_number">Turn 0</p>
-		<div id="stats">
-			<p id="max_hp"></p>
-			<p id="lowest_hp"></p>
-			<p id="max_dmg"></p>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link
+			rel="stylesheet"
+			href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+			integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+			crossorigin="anonymous"
+		/>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<div id="game">
+			<p id="playing" class="h3">Welcome</p>
+			<p id="alive">Press start to play</p>
+			<p id="alert"></p>
+			<select id="victim" name="victim" class="invisible"></select>
+			<div>
+				<a href="#" class="btn btn-dark invisible" id="attack">Attack</a>
+				<a href="#" class="btn btn-dark invisible" id="special">Special attack</a>
+			</div>
+			<p id="turn_number"></p>
+			<div id="stats">
+				<p id="max_hp"></p>
+				<p id="lowest_hp"></p>
+				<p id="max_dmg"></p>
+			</div>
+			<a href="#" class="btn btn-dark" id="start">Start</a>
 		</div>
-		<a href="#" class="btn btn-dark" id="start">Start</a>
 
-	</div>
-	
-	<script type="module" src="./script.js"></script>
-</body>
+		<script type="module" src="./script.js"></script>
+	</body>
 </html>

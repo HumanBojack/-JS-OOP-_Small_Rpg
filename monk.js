@@ -10,8 +10,12 @@ export default class Monk extends Character {
 			this.hp += 8;
 			this.turn.endPlayerTurn(this);
 		} else {
-			console.log("Not enough mana");
+			alertHTML.textContent = `You probably don't have enought mana (${this.mana})`;
 		}
 		return this;
+	}
+
+	special(victim){
+		this.heal();
 	}
 }
