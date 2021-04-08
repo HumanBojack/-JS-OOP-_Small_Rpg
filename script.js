@@ -22,4 +22,20 @@ window.Draven = Draven;
 const Carl = new Assassin("Carl");
 window.Carl = Carl;
 
+window.gameHTML = document.getElementById("game");
+window.playingHTML = document.getElementById("playing");
+window.aliveHTML = document.getElementById("alive");
+window.victimHTML = document.getElementById("victim");
+window.attackBtnHTML = document.getElementById("attack");
+window.specialBtnHTML = document.getElementById("special");
+window.turnHTML = document.getElementById("turn_number");
+window.statsHTML = document.getElementById("stats");
+window.startBtnHTML = document.getElementById("start");
+
+startBtnHTML.addEventListener("click", function(){ new Game() });
+attackBtnHTML.addEventListener("click", function(){ 
+	let player = Game.current.currentPlayer;
+	let victim = Character.all.find(character => character.name == victimHTML.value);
+	player.dealDamage(victim);
+});
 

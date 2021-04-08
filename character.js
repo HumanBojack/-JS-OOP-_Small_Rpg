@@ -7,6 +7,7 @@ export default class Character {
 		this.mana = mana;
 		this.timeoutId = 0;
 		this.hasPlayed = false;
+		this.cooldown = 0;
 		Character.all.push(this);
 	}
 
@@ -23,6 +24,7 @@ export default class Character {
 	dealDamage(victim) {
 		if (victim.status == "playing") {
 			victim.takeDamage(this.dmg);
+			console.log(this.dmg);
 			if (victim.status == "loser") {
 				this.mana += 20;
 			}

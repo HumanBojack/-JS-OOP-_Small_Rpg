@@ -1,0 +1,2 @@
+body {background-color: black; display: flex; justify-content: center; align-items: center; height: 90vh;}
+#game { background-color: grey; width: 600px; height: 600px;}
